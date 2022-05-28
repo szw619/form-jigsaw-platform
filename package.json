@@ -5,12 +5,20 @@
   "scripts": {
     "dev": "vite",
     "build": "vue-tsc --noEmit && vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "commit": "git add --all && git-cz"
   },
   "dependencies": {
     "vue": "^3.2.25"
   },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog-zh"
+    }
+  },
   "devDependencies": {
+    "@commitlint/cli": "^17.0.1",
+    "@commitlint/config-conventional": "^17.0.0",
     "@vitejs/plugin-vue": "^2.3.3",
     "cz-customizable": "^6.3.0",
     "typescript": "^4.5.4",
